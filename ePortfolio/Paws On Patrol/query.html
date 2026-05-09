@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Paws On Patrol::Querey</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="pawspatrol.css">
+</head>
+
+<body>
+<div id="wrapper">
+<header>
+<h1>Paws On Patrol Adoption Database</h1>
+</header>
+
+<nav>
+<ul>
+<li><a href="home.html">Home</a></li>
+<li><a href="adoptCat.html">Adopt Cats Now</a></li>
+<li><a href="adoptDog.html">Adopt Dogs Now</a></li>
+<li><a href="shelters.html">Shelters</a></li>
+<li><a href="query.html">Contact Us</a></li>
+</ul>
+</nav>
+
+<main>
+<h2>Ask Us Anything!</h2>
+<h3>contact us for any questions on the database or suggestions to improve our growing site!</h3>
+<p>Required feilds are marked with an asterisk *.</p>
+
+<form method="post" action="https://webdevbasics.net/scripts/pawsonpatrol.php">
+<label for="myFName">*First Name:</label>
+<input type="text" id="myFName" name="myFName" required>
+
+<label for="myLName">*Last Name:</label>
+<input type="text" id="myLName" name="myLname" required>
+
+<label for="myEmail">*E-mail:</label>
+<input type="email" id="myEmail" name="myEmail">
+
+<label for="myPhone">Phone:</label>
+<input type="tel" id="myPhone" name="myPhone">
+
+<label for="myComments">*Comments:</label>
+<textarea id="myComments" name="myComments" rows="2" cols="30" required></textarea>
+
+<input type="submit" value="Submit">
+</form>
+</main>
+
+
+<footer>
+<small><i>Copyright &copy 2026 Paws On Patrol</i></small><br>
+<a href="mailto:POPquerey@yahoo.mail">POPquerey@yahoo.mail</a>
+</footer>
+</div>
+</body>
+</html>
