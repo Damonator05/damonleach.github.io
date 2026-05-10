@@ -59,8 +59,6 @@ object-fit: cover;
     justify-content: center;
 }
 
-/* Semi-transparent overlay sits on top of the pattern but under the text,
-   keeping the name legible while the pattern shows through subtly */
 .header::before {
     content: '';
     position: absolute;
@@ -105,7 +103,7 @@ nav a
 text-decoration: none;
 color: white;
 font-weight: bold;
-border: 2px solid transparent; /* invisible border to prevent jumping */
+border: 2px solid transparent;
 padding: 5px 15px;
 transition: 0.3s;
 }
@@ -433,6 +431,142 @@ figcaption {
 
 @media (max-width: 600px) {
   .project-figures {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Home Page ───────────────────────────────────────────── */
+
+.home-section {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.home-section:last-child {
+  border-bottom: none;
+}
+
+.home-section h2 {
+  color: #3867FF;
+  border-left: 4px solid #3867FF;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+/* About Me */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 30px;
+  align-items: start;
+}
+
+.about-text p {
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.about-img-placeholder {
+  width: 180px;
+  height: 220px;
+  background-color: #f0f4ff;
+  border: 2px dashed #3867FF;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #787878;
+  font-size: 0.85rem;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.about-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  object-position: center 5%;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border: 3px solid #3867FF;
+  flex-shrink: 0;
+}
+
+/* Education */
+.education-entry {
+  background-color: #f7f9ff;
+  border: 1px solid #c5d0f5;
+  border-left: 4px solid #3867FF;
+  border-radius: 6px;
+  padding: 20px 24px;
+}
+
+.education-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.education-header h3 {
+  margin: 0;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.course-grid span {
+  background-color: #fff;
+  border: 1px solid #c5d0f5;
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.skills-category {
+  background-color: #f7f9ff;
+  border: 1px solid #c5d0f5;
+  border-left: 4px solid #3867FF;
+  border-radius: 6px;
+  padding: 16px 20px;
+}
+
+.skills-category h3 {
+  margin: 0 0 12px;
+  color: #3867FF;
+  font-size: 0.95rem;
+}
+
+/* ── Home Page Responsive ────────────────────────────────── */
+
+@media (max-width: 600px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-img-placeholder,
+  .about-img {
+    width: 100%;
+    height: 200px;
+  }
+  .course-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .skills-grid {
     grid-template-columns: 1fr;
   }
 }
